@@ -1,0 +1,31 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+    use_sim_time: true
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    leg_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+leg_trajectory_controller:
+  ros__parameters:
+    joints:
+    - leg_1_joint
+    - leg_1_2_joint
+    - leg_1_3_joint
+    - leg_2_joint
+    - leg_2_2_joint
+    - leg_2_3_joint
+    - leg_3_joint
+    - leg_3_2_joint
+    - leg_3_3_joint
+    - leg_4_joint
+    - leg_4_2_joint
+    - leg_4_3_joint
+    command_interfaces:
+    - position
+    state_interfaces:
+    - position
+    - velocity
+    allow_partial_joints_goal: false
+    state_publish_rate: 50.0
+    action_monitor_rate: 10.0
