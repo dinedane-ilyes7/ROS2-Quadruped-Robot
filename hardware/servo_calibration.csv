@@ -1,0 +1,13 @@
+leg,joint,pca9685_channel,standing_pwm_us,tested_min_pwm_us,tested_max_pwm_us
+front_left,hip_roll,0,1800,1200,2000
+front_left,hip_pitch,1,1200,1000,2000
+front_left,knee,2,1100,1000,2000
+rear_left,hip_roll,4,1500,1000,1900
+rear_left,hip_pitch,5,1500,1000,2000
+rear_left,knee,6,1500,1000,2000
+front_right,hip_roll,8,1500,1000,2000
+front_right,hip_pitch,9,1700,1000,2000
+front_right,knee,10,1300,1000,1700
+rear_right,hip_roll,12,1400,1000,1800
+rear_right,hip_pitch,13,1500,1000,2000
+rear_right,knee,14,1100,1000,1800
