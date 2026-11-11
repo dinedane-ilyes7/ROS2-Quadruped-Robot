@@ -16,7 +16,8 @@ This repository brings together a historical `mini_dog` robot model (SolidWorks 
 
 | Path | Description |
 | --- | --- |
-| [`ros2_ws/src/mini_dog/`](ros2_ws/src/mini_dog/) | Reconstructed ROS 2 robot-description and Gazebo integration candidate with original STL meshes |
+| [`ros2_ws/src/mini_dog/`](ros2_ws/src/mini_dog/) | Reconstructed ROS 2 robot-description and Gazebo integration candidate (mesh archive included; extraction required) |
+| [`ros2_ws/src/mini_dog/meshes.tar.xz`](ros2_ws/src/mini_dog/meshes.tar.xz) | All 13 original historical STL meshes in a verified compressed archive (extract before building) |
 | [`hardware/servo_calibration.csv`](hardware/servo_calibration.csv) | Latest recorded 12 servo standing PWM targets and conservative tested bounds |
 | [`hardware/platformio.ini`](hardware/platformio.ini) | Reported Teensy 3.2 PlatformIO settings (firmware source not yet recovered) |
 | [`docs/PROJECT_PROGRESS.md`](docs/PROJECT_PROGRESS.md) | Verified achievements versus unverified/reconstructed aspects |
@@ -34,10 +35,21 @@ This repository brings together a historical `mini_dog` robot model (SolidWorks 
 
 Those outcomes refer to the **previous local configuration**, not a run of this reconstructed ZIP. No full gait or robot-learning controller is included.
 
+## Mesh assets and setup
+
+The **13 original STL mesh files are included**, but stored as one compressed `meshes.tar.xz` file in the ROS 2 package to preserve their binary contents. Before building, extract them with the repository's small validation-aware script:
+
+```bash
+python3 ros2_ws/src/mini_dog/scripts/extract_meshes.py
+```
+
+This creates `ros2_ws/src/mini_dog/meshes/base_link.stl` and `leg_1*.stl` through `leg_4*.stl`. No network download is needed. Run this **before** the first `colcon build` so the existing `setup.py` includes the STL files. The meshes are historical source geometry; the present URDF/Gazebo configuration is a reconstruction that has not been validated in Gazebo from this checkout.
+
 ## Build and test (candidate; requires an installed Jazzy/Gazebo environment)
 
 ```bash
 source /opt/ros/jazzy/setup.bash
+python3 ros2_ws/src/mini_dog/scripts/extract_meshes.py
 mkdir -p ~/quadruped_ws/src
 cp -a ros2_ws/src/mini_dog ~/quadruped_ws/src/
 cd ~/quadruped_ws
@@ -47,6 +59,16 @@ ros2 launch mini_dog gazebo_full.launch.py
 ```
 
 The launch and modified URDF here are a **best-effort reconstruction**, so review them against the latest known-working files from `~/quadruped_ws/src/mini_dog` before replacing your local setup.
+
+## Source validation
+
+Basic offline checks (URDF joints, controller names, 12 servo calibration records and complete mesh archive):
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+These do **not** replace `colcon`, Gazebo, real robot or RL-policy validation.
 
 ## Important safety and authorship notes
 
