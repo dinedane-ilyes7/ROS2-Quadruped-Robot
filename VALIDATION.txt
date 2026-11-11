@@ -1,0 +1,3 @@
+Static validation completed: 12 revolute joint names match controller config; Xacro XML and package XML parse; Python sources parse; 12 calibrated channels and CH12 reference checked.
+
+NOT tested: live ROS 2 Jazzy, Gazebo physics/controller startup, PlatformIO firmware, physical servo behavior, Isaac Lab.
