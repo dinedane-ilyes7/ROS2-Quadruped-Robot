@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="LatestFullRobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.000918951444044161 0.0221447187114245 -0.0233567808148937"
+        rpy="0 0 0" />
+      <mass
+        value="0.326397745112391" />
+      <inertia
+        ixx="0.000472462400170677"
+        ixy="2.47138304262671E-08"
+        ixz="-7.59133223679088E-08"
+        iyy="0.000128027086008689"
+        iyz="-2.52417770266374E-08"
+        izz="0.000485679960371829" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/base_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/base_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="leg_1">
+    <inertial>
+      <origin
+        xyz="0.00807721276402833 -0.0184736692139743 -0.000869962348275091"
+        rpy="0 0 0" />
+      <mass
+        value="0.0565354551270283" />
+      <inertia
+        ixx="8.73096219503701E-06"
+        ixy="-1.96304915867424E-08"
+        ixz="-5.49796760218646E-07"
+        iyy="6.69683565664467E-06"
+        iyz="1.72043932374156E-08"
+        izz="4.83062889447818E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_1.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_1"
+    type="revolute">
+    <origin
+      xyz="0.049034 -0.09865 -0.0087648"
+      rpy="1.5303 0.28467 -0.1434" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg_1" />
+    <axis
+      xyz="-0.13715 0 -0.99055" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="30" />
+  </joint>
+  <link
+    name="leg_1_2">
+    <inertial>
+      <origin
+        xyz="0.044421427771908 0.00301411233261085 -0.00858088115258787"
+        rpy="0 0 0" />
+      <mass
+        value="0.0361426836058475" />
+      <inertia
+        ixx="1.82416737620557E-06"
+        ixy="-1.30819895494402E-06"
+        ixz="-5.25239785185494E-07"
+        iyy="3.91171087670088E-05"
+        iyz="-1.79115457365367E-08"
+        izz="3.94849013260011E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_1_2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_1_2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_1_2"
+    type="revolute">
+    <origin
+      xyz="0.043946 -0.01 -0.01618"
+      rpy="-1.7542 0.71963 -1.6924" />
+    <parent
+      link="leg_1" />
+    <child
+      link="leg_1_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="30" />
+  </joint>
+  <link
+    name="leg_1_3">
+    <inertial>
+      <origin
+        xyz="0.0619503197741424 -0.00256115639339989 -0.00154218058653471"
+        rpy="0 0 0" />
+      <mass
+        value="0.0261299428500401" />
+      <inertia
+        ixx="3.68003220591606E-06"
+        ixy="5.18011902574691E-06"
+        ixz="-6.99615572420818E-06"
+        iyy="3.3333374296614E-05"
+        iyz="1.13069017006931E-06"
+        izz="3.30412608550772E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_1_3.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_1_3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_1_3"
+    type="fixed">
+    <origin
+      xyz="0.099939 0.0035 0.00628"
+      rpy="0 0.21135 -1.4131" />
+    <parent
+      link="leg_1_2" />
+    <child
+      link="leg_1_3" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="10"
+      velocity="30" />
+  </joint>
+  <link
+    name="leg_2">
+    <inertial>
+      <origin
+        xyz="0.00444678931025547 -0.0198958063175116 0.0022181399428398"
+        rpy="0 0 0" />
+      <mass
+        value="0.0517620105444719" />
+      <inertia
+        ixx="7.90746854343027E-06"
+        ixy="-3.71322187608868E-07"
+        ixz="1.57929955860149E-09"
+        iyy="6.56481462270562E-06"
+        iyz="2.8549840885234E-08"
+        izz="3.78368330022041E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_2"
+    type="revolute">
+    <origin
+      xyz="0.048619 0.09865 -0.0085946"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="30" />
+  </joint>
+  <link
+    name="leg_2_2">
+    <inertial>
+      <origin
+        xyz="0.0443557275508889 0.00300491720662097 -0.00858088093898868"
+        rpy="0 0 0" />
+      <mass
+        value="0.0361426845487484" />
+      <inertia
+        ixx="1.8241674164686E-06"
+        ixy="-1.30819889808306E-06"
+        ixz="-5.25240045915488E-07"
+        iyy="3.91171097901262E-05"
+        iyz="-1.79115061934595E-08"
+        izz="3.94849023211388E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_2_2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_2_2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_2_2"
+    type="revolute">
+    <origin
+      xyz="0.042 -0.020715 -0.01"
+      rpy="-1.5708 0.72501 -1.8138" />
+    <parent
+      link="leg_2" />
+    <child
+      link="leg_2_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="30" />
+  </joint>
+  <link
+    name="leg_2_3">
+    <inertial>
+      <origin
+        xyz="0.0602752175410223 0.00743747460952843 0.0134416963521462"
+        rpy="0 0 0" />
+      <mass
+        value="0.0261299399052541" />
+      <inertia
+        ixx="1.97683244520293E-06"
+        ixy="-4.41972312058838E-06"
+        ixz="2.18548438637829E-06"
+        iyy="3.36336790890721E-05"
+        iyz="4.15501283849228E-07"
+        izz="3.44441570022626E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_2_3.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_2_3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_2_3"
+    type="revolute">
+    <origin
+      xyz="0.099939 0.0035 0.00703"
+      rpy="-2.7551 0 -1.38" />
+    <parent
+      link="leg_2_2" />
+    <child
+      link="leg_2_3" />
+    <axis
+      xyz="0 0.37694 0.92624" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="30" />
+  </joint>
+  <link
+    name="leg_3">
+    <inertial>
+      <origin
+        xyz="-0.00216176487350169 -0.0200683702966207 -1.21472452269678E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0573984347661049" />
+      <inertia
+        ixx="8.6016502039084E-06"
+        ixy="6.31153393224483E-07"
+        ixz="-5.04185330503721E-09"
+        iyy="6.91097879825208E-06"
+        iyz="1.29501457823454E-08"
+        izz="4.76176360199388E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_3.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_3"
+    type="revolute">
+    <origin
+      xyz="-0.049244 -0.09865 -0.0088595"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="30" />
+  </joint>
+  <link
+    name="leg_3_2">
+    <inertial>
+      <origin
+        xyz="0.0439457698924543 0.00744303951830944 -0.00855376867979867"
+        rpy="0 0 0" />
+      <mass
+        value="0.0361426844126697" />
+      <inertia
+        ixx="3.26327312873424E-06"
+        ixy="-7.30129074159938E-06"
+        ixz="-5.15099756680634E-07"
+        iyy="3.76780039202593E-05"
+        iyz="-1.04260723013794E-07"
+        izz="3.94849021932661E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_3_2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_3_2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_3_2"
+    type="revolute">
+    <origin
+      xyz="-0.04051 -0.023494 -0.01"
+      rpy="1.5708 0.97344 -1.2604" />
+    <parent
+      link="leg_3" />
+    <child
+      link="leg_3_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="30" />
+  </joint>
+  <link
+    name="leg_3_3">
+    <inertial>
+      <origin
+        xyz="0.0602753585082011 0.00182185934425336 -0.0147535889319719"
+        rpy="0 0 0" />
+      <mass
+        value="0.0261301418449791" />
+      <inertia
+        ixx="1.97682411634027E-06"
+        ixy="-4.91752029486299E-06"
+        ixz="-3.58286943564725E-07"
+        iyy="3.34585932013465E-05"
+        iyz="-1.44985904869455E-08"
+        izz="3.46190053858365E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_3_3.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_3_3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_3_3"
+    type="revolute">
+    <origin
+      xyz="0.097994 0.019929 0.00628"
+      rpy="0 0 1.6937" />
+    <parent
+      link="leg_3_2" />
+    <child
+      link="leg_3_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="30" />
+  </joint>
+  <link
+    name="leg_4">
+    <inertial>
+      <origin
+        xyz="0.00284220232432845 -0.0201025212233243 0.000288230569310183"
+        rpy="0 0 0" />
+      <mass
+        value="0.0576210458241083" />
+      <inertia
+        ixx="8.64026638682124E-06"
+        ixy="-5.76446385967316E-07"
+        ixz="-1.12144819610187E-09"
+        iyy="6.87287286964103E-06"
+        iyz="-2.50548084505162E-08"
+        izz="4.76961444382194E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_4.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_4.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_4"
+    type="fixed">
+    <origin
+      xyz="-0.048955 0.09865 -0.0087306"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg_4" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="10"
+      velocity="30" />
+  </joint>
+  <link
+    name="leg_4_2">
+    <inertial>
+      <origin
+        xyz="0.0438595350964192 0.00743243720628222 -0.00855376875619115"
+        rpy="0 0 0" />
+      <mass
+        value="0.0361426837528661" />
+      <inertia
+        ixx="3.2632731404741E-06"
+        ixy="-7.30129069399119E-06"
+        ixz="-5.15099744538216E-07"
+        iyy="3.76780031856879E-05"
+        iyz="-1.04260785386303E-07"
+        izz="3.94849015091176E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_4_2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_4_2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_4_2"
+    type="revolute">
+    <origin
+      xyz="0.041229 -0.022209 0.01"
+      rpy="-1.5708 -1.0977 -1.8497" />
+    <parent
+      link="leg_4" />
+    <child
+      link="leg_4_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="30" />
+  </joint>
+  <link
+    name="leg_4_3">
+    <inertial>
+      <origin
+        xyz="0.0602753196560252 0.00182186370547854 -0.0129735894565662"
+        rpy="0 0 0" />
+      <mass
+        value="0.0261301205633789" />
+      <inertia
+        ixx="1.97682511486812E-06"
+        ixy="-4.91752064162274E-06"
+        ixz="-3.58285521840611E-07"
+        iyy="3.34586074611912E-05"
+        iyz="-1.44985680475775E-08"
+        izz="3.46190210088459E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_4_3.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mini_dog/meshes/leg_4_3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_4_3"
+    type="revolute">
+    <origin
+      xyz="0.097994 0.019929 0.0045"
+      rpy="0 0 1.6344" />
+    <parent
+      link="leg_4_2" />
+    <child
+      link="leg_4_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="30" />
+  </joint>
+</robot>
